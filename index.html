@@ -3066,7 +3066,7 @@
 		top: 222.5px;
 		left: 270.267px;
 	}
-	
+
 	#IMAGE43 > .ladi-image > .ladi-image-background,
 	#IMAGE42 > .ladi-image > .ladi-image-background {
 		background-image: url("https://w.ladicdn.com/s350x350/6322a62f2dad980013bb5005/png-clipart-computer-icons-arrow-miscellaneous-angle-20250323082200-ub0dm.png");
@@ -5925,7 +5925,7 @@
 								<div class="ladi-image-background"></div>
 							</div>
 						</div>
-						<div id="BOX27" class="ladi-element ladi-animation-hidden">
+						<div id="BOX27" class="ladi-element ">
 							<div class="ladi-box ladi-transition"></div>
 						</div>
 						<div id="HEADLINE90" class="ladi-element">
@@ -5954,6 +5954,7 @@
 							<p class="ladi-headline ladi-transition">01.12.2025</p>
 						</div>
 					</div>
+					
 				</div>
 				<div id="POPUP3" class="ladi-element">
 					<div class="ladi-popup">
@@ -5975,7 +5976,7 @@
 						<div id="HEADLINE501" class="ladi-element">
 							<h3 class="ladi-headline ladi-transition">Vũ Thị Huế</h3> </div>
 						<div id="HEADLINE502" class="ladi-element">
-							<h3 class="ladi-headline ladi-transition">Vietinbank<br>109872429728</h3> </div>
+							<h3 class="ladi-headline ladi-transition">Vietinbank<br>109872429728</h3> </div> -->
 						<div id="LINE16" class="ladi-element">
 							<div class="ladi-line">
 								<div class="ladi-line-container"></div>
@@ -6459,6 +6460,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const form   = document.getElementById('rsvpForm');
   const btn    = document.getElementById('BUTTON2');
   const popup  = document.getElementById('POPUP1');
+  const box27 = document.getElementById('BOX27');
+  //const popupclose = document.getElementsByClassName('popup-close');
   const closeBtn = document.getElementById('IMAGE42');
 
   // 🔹 Tạo overlay nếu chưa có
@@ -6480,10 +6483,13 @@ document.addEventListener('DOMContentLoaded', function () {
     requestAnimationFrame(() => overlay.style.opacity = '1');
 
     popup.style.display = 'block';
+    //popupclose.style.display = 'block';
     popup.style.opacity = '1';
     popup.style.visibility = 'visible';
     popup.classList.remove('ladi-animation-hidden');
-    document.body.style.overflow = 'hidden';
+    box27.classList.remove('ladi-animation-hidden');
+	
+    //document.body.style.overflow = 'hidden';
   }
 
   // 🔹 Đóng popup + overlay (ẩn ngay, không delay)
